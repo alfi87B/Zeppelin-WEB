@@ -380,16 +380,16 @@ footer section{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 .filtro-producto{
-    width: 100%;
+    width: 12.5rem;
     display: flex;
     align-items: start;
-    justify-content: center;
+    justify-content: start;
 }
 .filtro{
-    width: 15%;
+    width: 12.5rem;
     margin: 1.5rem 1rem;
     display: block;
 }
@@ -420,6 +420,15 @@ footer section{
     justify-content: left;
     padding: .1875rem;
     list-style: none;
+}
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.25rem; 
 }
 
 /* CONTACTOS */
