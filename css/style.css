@@ -94,7 +94,6 @@ nav{
     justify-content: space-around;
 }
 .menu-principal li{
-    display: n;
     align-items: center;
     justify-content: space-around;
 }
@@ -145,6 +144,7 @@ nav{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 0px -5em
 }
 .img-titulo{
     width: 80%;
@@ -689,9 +689,11 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         height: 18rem;
         margin:  6rem;
         object-fit: contain;
+        margin: 1rem 0;
     }
     .logo-nav img{
-        width: auto;
+        width: 100%;
+        height: auto;
         padding: 6rem;
         align-items: center;
         justify-content: center;
@@ -727,13 +729,32 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         height: 5rem;
         padding: 0rem 2rem;
     }
-    
-    .logo-nav{
-        margin: 1rem 0; /* Espaciado para el logo */
+    .carrusel{
+        height: 28rem;
+    }
+    .carrusel img{
+        object-position: 0px -2em
+    }
+    .img-titulo ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .linea-izq, .linea-der{
+        border-top: 5px solid #8F00FF;
     }
     
-    .logo-nav img{
-        width: 100%; /* Logo ocupa todo el ancho disponible */
-        height: auto; /* Ajusta la altura automáticamente */
+    .titulo-seccion h1{
+        font-size: 3rem;
     }
+
+
+
+
+
+
+
+
+
 }
