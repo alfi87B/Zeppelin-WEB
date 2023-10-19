@@ -52,7 +52,7 @@ nav{
     gap: .625rem;
     display: flex;
 }
-.navlo-right a{
+.navlo-right ul li a{
     font-size: .875rem;
     text-decoration: none;
     color: white;
@@ -190,7 +190,7 @@ main{
 
 .linea-izq, .linea-der{
     border-top: 2px solid #8F00FF;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .titulo-seccion h1{
@@ -319,61 +319,7 @@ main{
     padding: 0rem 1.875rem;
 }
 
-/* FOOTER */
-footer{
-    width: 100%;
-    height: auto;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-}
-footer section{
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.footer-container{
-    width: 100%; 
-    display: block;
-    align-items: center;
-    justify-content: center;
-}
-.footer-info{
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
-}
-.footer-column{
-    width: 30%;
-    height: auto;
-    margin: 20px;
-    text-align: left;
-}
-.footer-column div h3{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: left;
-    text-decoration: none;
-    padding: 1rem 0rem;
-    border-bottom: .125rem solid #8F00FF;
-}
-.footer-column div ul{
-    color: white;
-    list-style: none;
-    padding: 1rem 0rem;
-}
-.footer-column div ul li{
-    padding: 0.425rem 0rem
-}
-.footer-column div ul li a{
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-}
+
 .medios-pago{
     display: flex;
     align-items: center;
@@ -648,40 +594,86 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
     justify-content: center;
 }
 
+/* FOOTER */
+footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+footer section{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-container{
+    width: 100%; 
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.footer-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-info{
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+.footer-column{
+    width: 38%;
+    height: auto;
+    margin: 20px;
+    text-align: left;
+}
+.footer-column div h3{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+    padding: 1rem 0rem;
+    border-bottom: .125rem solid #8F00FF;
+}
+.footer-column div ul{
+    color: white;
+    list-style: none;
+    padding: 1rem 0rem;
+}
+.footer-column div ul li{
+    padding: 0.425rem 0rem
+}
+.footer-column div ul li a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
 
 /* ::hover */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.menu :hover{
+    font-weight: bold;
+}
+.card button:hover{
+    background-color: #8F00FF;
+    color: white;
+}
 /* PUNTOS DE QUIEBRE */
 @media(max-width: 768px){
+    header{
+        padding: 0rem 1rem  ;
+    }
+    nav{
+        width: 90%;
+    }
+    .nav-login{
+        width: 90%;
+    }
     .navlo-left a{
         font-size: 1.2rem;
     }
@@ -691,8 +683,11 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
     .navlo-right a{
         font-size: 1.2rem;
     }
-.menu-principal li a{
-    font-size: 1.375rem;
+    .menu{
+        width: 90%;
+    }
+    .menu-principal li a{
+        font-size: 1.1rem;
     }
     .search-index input{
         width: 100px;
@@ -743,8 +738,12 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
     .historia-info article p{
         font-size: 1.3rem;
     }
-    .footer-column div ul{
-        font-size: 1.5rem;
+    .footer-column div h3{
+        color: white;
+        font-size: 1.1rem;
+    }
+    .footer-column div ul li{
+        font-size: 1rem;
     }
     .footer-copy p{
         color: white;
@@ -769,25 +768,39 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         grid-template-rows: auto;
     }
     header{
-        height: 29rem;
+        height: auto;
         padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .nav-login{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 3rem 0;
-        margin: 0rem;
+        padding: 1rem 1rem;
     }
     .navlo-left{
         display: none;
     }
+    .navlo-right ul{
+        display: flex;
+        justify-content: center;
+        padding: 0rem 1rem;
+    }
     .navlo-right ul li a{
         font-size: 2rem;
-        padding: 0rem 1rem;
+        text-align: center;
     }
     .navlo-linea{
         border-left: .3125rem solid #8F00FF;
+        padding: 0rem 1rem;
     }
     .menu{
         width: 90%;
@@ -797,14 +810,14 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         border-top: .25rem solid #8F00FF;;
     }
     .logo-nav{
-        height: 12rem;
+        height: 6rem;
         margin:  6rem;
         object-fit: contain;
         margin: 1rem;
     }
     .logo-nav img{
         width: auto;
-        height: 8rem;
+        height: 4rem;
         align-items: center;
         justify-content: center;
     }
@@ -823,15 +836,16 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         margin: 0rem;
     }
     .menu-principal{
-        width: 80%;
+        width: 90%;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
     }
-    .menu-principal li{
-        justify-content: center;
-        padding-right: 0rem;
-    }
     .menu-principal li a{
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    .cont{
+        display: none;
     }
     .guia{
         display: none;
@@ -844,7 +858,8 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
     }
     .cart img{
         height: 4rem;
-        margin-left: 16px;
+        margin-left: 0.5rem;
+        padding: none;
     }
     .carrusel{
         height: 28rem;
@@ -853,17 +868,26 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         object-position: 0px -2em
     }
     .img-titulo ul{
+        display: none;
+    }
+    .seccion-conteiner{
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .linea-izq, .linea-der{
-        border-top: 5px solid #8F00FF;
+    .seccion-info{
+        flex-direction: column;
+        align-items: center;
     }
-    
     .titulo-seccion h1{
-        font-size: 3rem;
+        font-size: 2.2rem; 
+        border-top: 3px solid #8F00FF;
+        padding-top: 1rem;
+    }
+    .linea-izq, .linea-der{
+        display: none;
     }
     .productos-destacados{
         display: flex;
@@ -926,6 +950,54 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         font-size: 1.8rem;
         padding: 2rem 2rem;
     }
+    .filtro-producto{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .filtro{
+        display: none; /* esto deberia ser un boton que abra el menu de filtros*/
+    }
+    .productos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .productos .card{
+        width: 16rem;
+        height: 25rem;
+        margin: 0.8rem;
+        border-radius:2%;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px grey;
+        text-align: center;
+    }
+    .productos .card div{
+        width: 100%;
+        height: 18rem;
+        object-fit: cover;
+    }
+    .productos .card img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .productos .card p{
+        font-size: 1.375rem;
+        font-weight: bold;
+        padding: 0.8rem;
+    }
+    .productos .card button{
+        font-size: 1.5rem;
+        color: black;
+        background-color: white;
+        border: .125rem solid #8F00FF;
+        border-radius: 9%;
+        padding: 0.2rem;
+    }
     footer{
         height: auto;
         display: flex;
@@ -951,9 +1023,9 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         font-size: 2.2rem;
         text-align: center;
     }
-    .footer-column div ul{
-        text-align: center;
+    .footer-column div ul li{
         font-size: 1.5rem;
+        text-align: center;
     }
     .medios-pago{
         display: flex;
