@@ -105,16 +105,15 @@ nav{
     color: white;
     text-decoration: none;
 }
-.search{
-    display: flex;
-}
+
 .search-index{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 .search-index input{
-    width: 200px;
+    flex: 1;
+    max-width: 12.5rem;
     height: 1.75rem;
     padding: 2px 2px 2px 32px;
     border-radius: 14px;
@@ -149,7 +148,7 @@ nav{
 }
 .img-titulo{
     width: 80%;
-    padding: 2rem;
+    padding: 1rem;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -169,7 +168,6 @@ nav{
 main{
     padding: 1.875rem 0px;
 }
-
 /* titulos secciones */
 .seccion-conteiner{
     width: 80%;
@@ -211,7 +209,7 @@ main{
     align-items: center;
     justify-content: center;
 }
-.card{
+.productos-destacados .card{
     width: 18.75rem;
     height: 25rem;
     margin: 40px;
@@ -220,58 +218,20 @@ main{
     box-shadow: 2px 2px 5px grey;
     text-align: center;
 }
-.card div{
+.productos-destacados .card div{
     width: 100%;
-    height: 18.75rem;
+    height: 18rem;
     object-fit: cover;
 }
-.card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card p{
-    font-size: 1.375rem;
-    font-weight: bold;
-    padding: 1rem;
-}
-.productos{
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.card{
-    width: 18.75rem;
-    height: 25rem;
-    margin: 40px;
-    border-radius:1%;
-    overflow: hidden;
-    box-shadow: 2px 2px 5px grey;
-    text-align: center;
-}
-.card div{
-    width: 100%;
-    height: 18.75rem;
-    object-fit: cover;
-}
-.card img{
+.productos-destacados .card img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.card p{
+.productos-destacados .card p{
     font-size: 1.375rem;
     font-weight: bold;
     padding: 1rem;
-}
-.card button{
-    font-size: 1.5rem;
-    color: black;
-    background-color: white;
-    border: .125rem solid #8F00FF;
-    border-radius: 9%;
-    padding: 0.2rem;
 }
 
 /* SEGUINOS */
@@ -474,8 +434,9 @@ footer section{
 }
 .filtro{
     width: 12.5rem;
-    margin: 1.5rem 1rem;
-    display: block;
+    margin: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
 }
 .filtro-titulo{
     display: block;
@@ -488,7 +449,6 @@ footer section{
     padding: .1875rem;
     list-style: none;
 }
-
 .filtro-titulo h2{
     font-size: 1rem;
 }
@@ -505,14 +465,51 @@ footer section{
     padding: .1875rem;
     list-style: none;
 }
-.productos {
+.productos{
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-areas: 
+    "card card card"
+    "card card card"
+    ;
+    row-gap: .625rem;
+    column-gap: .625rem ;
     align-items: center;
     justify-content: center;
     padding: 0 1.25rem; 
+}
+.productos .card{
+    width: 11rem;
+    height: 18rem;
+    margin: 0.8rem;
+    border-radius:1%;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px grey;
+    text-align: center;
+}
+.productos .card div{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+.productos .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productos .card p{
+    font-size: 1.375rem;
+    font-weight: bold;
+    padding: 0.8rem;
+}
+.productos .card button{
+    font-size: 1.5rem;
+    color: black;
+    background-color: white;
+    border: .125rem solid #8F00FF;
+    border-radius: 9%;
+    padding: 0.2rem;
 }
 
 /* CONTACTOS */
@@ -754,6 +751,15 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         font-size: 1.5rem;
         text-align: left;
         padding: 2rem;
+    }
+    .productos{
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "card card"
+        "card card"
+        "card card"
+        ;
     }
 }
 @media(max-width: 425px){
