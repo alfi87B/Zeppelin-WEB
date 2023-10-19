@@ -87,7 +87,7 @@ nav{
     justify-content: center;
 }
 .menu-principal{
-    width: 80%;
+    width: 100%;
     list-style: none;
     display: flex;
     align-items: center;
@@ -347,15 +347,15 @@ main{
 /* FOOTER */
 footer{
     width: 100%;
-    height: 28.125rem;
+    height: auto;
     background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start  ;
+    justify-content: start;
 }
 footer section{
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -373,53 +373,75 @@ footer section{
 }
 .footer-column{
     width: 30%;
-    height: 18.75rem;
-    margin: 40px;
+    height: auto;
+    margin: 20px;
     text-align: left;
 }
-.footer-column h3{
+.footer-column div h3{
     color: white;
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: left;
     text-decoration: none;
     padding: 1rem 0rem;
     border-bottom: .125rem solid #8F00FF;
 }
-.footer-column ul{
+.footer-column div ul{
     color: white;
     list-style: none;
     padding: 1rem 0rem;
 }
-.footer-column li{
-    padding: .425rem 0rem
+.footer-column div ul li{
+    padding: 0.425rem 0rem
 }
-.footer-column li a{
+.footer-column div ul li a{
     color: white;
     font-weight: 600;
     text-decoration: none;
 }
-.medios-pago img{
+.medios-pago{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.medios-pago li{
+    display: flex;
+} 
+.medios-pago li img{
     width: auto;
     height: 3.125rem;
     background-color: white; /**esto esta porque la imagen no tiene fondo y para que se vea que hay algo ahi ya la voy a cambiar**/
-    padding: .3125rem;
+    margin: 0.3125rem;
 }
-.contacto img{
-    width: auto;
-    height: 3.125rem;
-    background-color: white; /**esto esta porque la imagen no tiene fondo y para que se vea que hay algo ahi ya la voy a cambiar**/
-    padding: .3125rem;
-}
-.footer-copy{
-    width: 80%;
-    height: 1rem;
-    color: white;
-    font-size: .875rem;
-    text-align: left;
+.contacto{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.contacto li a{
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 0.5rem;
+}
+.contacto li img{
+    width: auto;
+    height: 3.125rem;
+    background-color: white; /**esto esta porque la imagen no tiene fondo y para que se vea que hay algo ahi ya la voy a cambiar**/
+    padding: 0.3125rem;
+}
+.footer-copy{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-copy p{
+    color: white;
+    font-size: 0.875rem;
+    text-align: left;
+    padding: 2rem;
 }
 
 /* PRODUCTOS */
@@ -662,18 +684,22 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         grid-template-rows: auto;
     }
     header{
-        height: 38rem;
+        height: 29rem;
         padding: 0.5rem;
     }
-    .navlo-left a{
-        font-size: 2rem;
-    }
     .nav-login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 3rem 0;
         margin: 0rem;
     }
-    .navlo-right a{
+    .navlo-left{
+        display: none;
+    }
+    .navlo-right ul li a{
         font-size: 2rem;
+        padding: 0rem 1rem;
     }
     .navlo-linea{
         border-left: .3125rem solid #8F00FF;
@@ -686,15 +712,15 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         border-top: .25rem solid #8F00FF;;
     }
     .logo-nav{
-        height: 18rem;
+        height: 12rem;
         margin:  6rem;
         object-fit: contain;
-        margin: 1rem 0;
+        margin: 1rem;
     }
     .logo-nav img{
         width: 100%;
         height: auto;
-        padding: 6rem;
+        padding: 2.5rem;
         align-items: center;
         justify-content: center;
     }
@@ -705,16 +731,17 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
         display: flex;
     }
     .menu-cart{
-        width: 80%;
+        width: 90%;
         display: flex;
         align-items: center;
-        justify-content: space-between ;
+        justify-content: space-between;
+        margin: 0rem;
     }
-    .menu-principal li{
-        padding: 1rem 2rem;
+    .menu-principal{
+        width: 100%;
     }
     .menu-principal li a{
-        font-size: 3.5rem;
+        font-size: 2.3rem;
     }
     .guia{
         display: none;
@@ -727,7 +754,7 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
     }
     .cart img{
         height: 5rem;
-        padding: 0rem 2rem;
+        padding: 0rem 1rem;
     }
     .carrusel{
         height: 28rem;
@@ -748,13 +775,133 @@ o como hacer una barra donde haya una lista suponiendo que habria muchas tiendas
     .titulo-seccion h1{
         font-size: 3rem;
     }
-
-
-
-
-
-
-
-
-
+    .productos-destacados{
+        display: flex;
+        flex-direction: column;
+    }
+    .productos-destacados .card{
+        width: 31.25rem;
+        height: 43.75rem;
+        border-radius:2%;
+    }
+    .productos-destacados .card div{
+        height: 28rem;
+    }
+    .productos-destacados .card p{
+        font-size: 4.5rem ;
+    }
+    .productos-destacados .card button{
+        font-size: 2.5rem;
+        color: black;
+        background-color: white;
+        border: solid #8F00FF;
+        border-radius: 9%;
+        padding: 1rem;
+    }
+    .seguinos-redes img{
+        height: 10rem;
+    }
+    .seccion-info{
+        flex-direction: column;
+    }
+    .seccion-info article{
+        width: 90%;
+    }
+    .info-info h3{
+        font-size: 2.5rem;
+        color: white;
+        border: 5px solid #8F00FF;
+        border-radius: 10px;
+        background-color: #8F00FF;
+    }
+    .info-info h4{
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+    .quienes-info{
+        width: 100%;
+    }
+    .historia-info{
+        height: auto;
+    }
+    .historia-info article{
+        height: auto;
+        flex-direction: column;
+        padding: none;
+    }
+    .historia-info article img{
+        width: 100%;
+    }
+    .historia-info article p{
+        font-size: 1.8rem;
+        padding: 2rem 2rem;
+    }
+    footer{
+        height: auto;
+        display: flex;
+    }
+    footer section{
+        width: 100%;
+        text-align: center;
+    }
+    .footer-container{
+        display: flex;
+    }
+    .footer-info{
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-column{
+        width: 80%;
+        height: auto;
+        margin: 10px;
+    }
+    .footer-column div h3{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .footer-column div ul{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .medios-pago{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .medios-pago li{
+        display: flex;
+    }    
+    .medios-pago li img{
+        height: 6rem;
+        margin: 0.5rem;
+    }
+    .contacto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contacto li a{
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0rem 1rem;
+    }
+    .contacto li a img{
+        width: auto;
+        height: 5rem;
+        background-color: white; /**esto esta porque la imagen no tiene fondo y para que se vea que hay algo ahi ya la voy a cambiar**/
+        padding: 0.3125rem;
+    }
+    .footer-copy{
+        width: 100%;
+        height: auto;
+    }   
+    .footer-copy p{
+        color: white;
+        font-size: 1.5rem;
+        text-align: left;
+        padding: 2rem;
+    }
 }
